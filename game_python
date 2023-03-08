@@ -1,0 +1,19 @@
+import random
+
+print("Добро пожаловать в игру 'Угадай число'!")
+print("Я загадал число от 1 до 100. Попробуйте отгадать его.")
+
+number = random.randint(1, 100)
+guesses = 0
+
+while True:
+    guess = int(input("Введите ваше предположение: "))
+    guesses += 1
+    
+    if guess < number:
+        print("Загаданное число больше вашего.")
+    elif guess > number:
+        print("Загаданное число меньше вашего.")
+    else:
+        print(f"Поздравляю, вы угадали число за {guesses} попыток!")
+        break
